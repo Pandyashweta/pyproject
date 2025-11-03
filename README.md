@@ -1,73 +1,58 @@
-# Welcome to your Lovable project
+# Python Project Portfolio
 
-## Project info
+A dynamic and modern web application designed to showcase a comprehensive collection of Python projects. This portfolio is built with React, TypeScript, and Vite, featuring a clean, responsive interface and powerful search capabilities.
 
-**URL**: https://lovable.dev/projects/d5612591-a93a-43df-9916-94336951f2c4
+ <!-- It's a good idea to add a screenshot of your project here! -->
 
-## How can I edit this code?
+## ✨ Features
 
-There are several ways of editing your application.
+- **Categorized Projects**: Projects are neatly organized into three main difficulty levels: Beginner, Intermediate, and Advanced.
+- **Detailed Sub-categories**: Each level is further broken down into specific topics (e.g., "Data Structures", "Web Scraping", "Machine Learning") for easy browsing.
+- **Fuzzy Search**: A powerful, debounced search on the homepage allows users to instantly find projects by title, description, or concepts using Fuse.js.
+- **Interactive UI**: Smooth page transitions and card animations powered by Framer Motion provide a polished user experience.
+- **Responsive Design**: The interface is fully responsive and built with modern tools like Shadcn UI and Tailwind CSS, ensuring it looks great on all devices.
+- **Clean Codebase**: Written in TypeScript with a well-organized project structure.
 
-**Use Lovable**
+## 🛠️ Tech Stack
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d5612591-a93a-43df-9916-94336951f2c4) and start prompting.
+- **Framework**: [React](https://react.dev/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/) & [Shadcn UI](https://ui.shadcn.com/)
+- **Routing**: [React Router](https://reactrouter.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **Search**: [Fuse.js](https://fusejs.io/)
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🚀 Getting Started
 
-**Use your preferred IDE**
+Follow these instructions to get a local copy of the project up and running.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Prerequisites
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Node.js (v18 or later recommended)
+- npm (or yarn/pnpm)
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/your-repo-name.git
+   cd your-repo-name
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+4. **Open in your browser:**
+   Navigate to `http://localhost:8080` to see the application.
 
-**Edit a file directly in GitHub**
+## 📜 License
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d5612591-a93a-43df-9916-94336951f2c4) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+This project is open-source and available under the MIT License.
