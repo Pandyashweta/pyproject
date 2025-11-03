@@ -2,7 +2,7 @@ import type { Config } from "tailwindcss";
 
 export default {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: ["./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
     container: {
@@ -20,15 +20,15 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
-          DEFAULT: "hsl(var(--primary))",
+          DEFAULT: "hsl(var(--foreground))",
           foreground: "hsl(var(--primary-foreground))",
         },
         secondary: {
-          DEFAULT: "hsl(var(--secondary))",
+          DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
-          DEFAULT: "hsl(var(--destructive))",
+          DEFAULT: "hsl(var(--foreground))",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
@@ -36,7 +36,7 @@ export default {
           foreground: "hsl(var(--muted-foreground))",
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
+          DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
@@ -47,9 +47,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        beginner: "hsl(var(--beginner))",
-        intermediate: "hsl(var(--intermediate))",
-        advanced: "hsl(var(--advanced))",
+        beginner: "hsl(var(--foreground))",
+        intermediate: "hsl(var(--foreground))",
+        advanced: "hsl(var(--foreground))",
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],

@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { projects, categories } from "@/data/projects";
+import { allProjects, processedBeginnerProjects, processedIntermediateProjects, processedAdvancedProjects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -10,15 +10,20 @@ const Index = () => {
   const [selectedDifficulty, setSelectedDifficulty] = useState<string>("all");
   const [searchQuery, setSearchQuery] = useState("");
 
+  const categories = useMemo(() => {
+    const allCategories = new Set<string>();
+    allProjects.forEach(p => allCategories.add(p.category));
+    return ["All", ...Array.from(allCategories)];
+  }, []);
+
   const filteredProjects = useMemo(() => {
-    return projects.filter((project) => {
+    return allProjects.filter((project) => {
       const matchesCategory = selectedCategory === "All" || project.category === selectedCategory;
       const matchesDifficulty = selectedDifficulty === "all" || project.difficulty === selectedDifficulty;
       const matchesSearch =
         searchQuery === "" ||
         project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.concepts.some((concept) => concept.toLowerCase().includes(searchQuery.toLowerCase()));
+        project.description.toLowerCase().includes(searchQuery.toLowerCase());
 
       return matchesCategory && matchesDifficulty && matchesSearch;
     });
