@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { Input } from "@/components/ui/input";
-import { Search, X } from "lucide-react";
+import { Search } from "lucide-react";
 import Typewriter from "typewriter-effect";
 import { allProjects } from "@/data/projects";
 import { Project } from "@/types";
@@ -9,6 +9,7 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
+  DialogClose,
   DialogFooter,
   DialogTitle,
 } from "@/components/ui/dialog";
@@ -115,9 +116,9 @@ export function HomePage() {
             </div>
           )}
           <DialogFooter className="sm:justify-start">
-            <Button type="button" variant="secondary" onClick={handleClearSearch}>
-              <X className="mr-2 h-4 w-4" /> Clear Search
-            </Button>
+            <DialogClose asChild>
+              <Button type="button" variant="secondary">Close</Button>
+            </DialogClose>
           </DialogFooter>
         </DialogContent>
       </Dialog>

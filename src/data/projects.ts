@@ -397,7 +397,7 @@ const processProjects = (level: 'beginner' | 'intermediate' | 'advanced', data: 
     let idCounter = 1;
     const result: { [category: string]: Project[] } = {};
     for (const category in data) {
-        result[category] = data[category].map((proj: unknown) => ({
+        result[category] = data[category].map((proj) => ({
             ...proj,
             concepts: [], // Add empty concepts array
             id: `${level}-${idCounter++}`,
