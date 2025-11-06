@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Project } from "@/types";
-import ProjectCard from "./components/ProjectCard";
 
+import  ProjectCard  from "./components/ProjectCard";
 interface ProjectsPageProps {
   projectsData: { [category: string]: Project[] };
   difficulty: 'Beginner' | 'Intermediate' | 'Advanced';
@@ -11,6 +11,11 @@ export function ProjectsPage({ projectsData, difficulty }: ProjectsPageProps) {
   const categories = Object.keys(projectsData);
   // FIX: Set the initial active category to the first one in the list.
   const [activeCategory, setActiveCategory] = useState(categories[0] || '');
+
+  useEffect(() => {
+    const firstCategory = Object.keys(projectsData)[0];
+    setActiveCategory(firstCategory || '');
+  }, [projectsData]);
 
   const projects = projectsData[activeCategory];
 
@@ -34,9 +39,10 @@ export function ProjectsPage({ projectsData, difficulty }: ProjectsPageProps) {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {projects.map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+        {projects?.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))
+        }
       </div>
     </div>
   );
