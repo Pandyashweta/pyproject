@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { ThemeToggle } from "./ThemeToggle";
 
 export function Header() {
   const navLinkClasses = ({ isActive }: { isActive: boolean }) =>
@@ -21,7 +20,6 @@ export function Header() {
         <NavLink to="/about" className={navLinkClasses}>
           About
         </NavLink>
-        <ThemeToggle />
       </nav>
     </header>
   );

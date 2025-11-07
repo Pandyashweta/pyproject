@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, FileText } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const contributors = [
   { name: "Team PS", profileUrl: "mailto:team.email@example.com" },
@@ -48,15 +48,6 @@ export function AboutPage() {
             aria-label="GitHub"
           >
             <Github className="w-7 h-7" />
-          </a>
-          <a
-            href="#" // TODO: Replace with your Resume URL
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-foreground transition-all hover:scale-110"
-            aria-label="Resume"
-          >
-            <FileText className="w-7 h-7" />
           </a>
         </div>
 
